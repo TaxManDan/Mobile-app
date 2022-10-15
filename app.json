@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "trembling-marshmallows",
-    "slug": "snack-1cb918e8-35ce-410a-9676-11ddf47e6366",
+    "name": "mobile-app",
+    "slug": "mobile-app",
     "version": "1.0.0",
+    "owner": "dannyetolman",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",

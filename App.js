@@ -1,35 +1,15 @@
-import * as React from 'react';
-import { Text, View, StyleSheet, TextInput, Button } from 'react-native';
-import Constants from 'expo-constants';
-
-// You can import from local files
-import AssetExample from './components/AssetExample';
-
-// or any pure javascript modules available in npm
-import { Card } from 'react-native-paper';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-     <Text
-     title = "Welcome"
-     backgroundColor = '#ffffff'
-     />
-      <TextInput 
-      autoCorrect={true}
-      placeholder="Distance"
-      backgroundColor = '#faa0af'
-      />
+      <Text>Open up App.js to start working on your app!</Text>
       <TextInput
-      placeholder = "Time"
-      backgroundColor = '#aa0aaf'
+      autoCorrect={true}
+      placeholder="Test"
       />
-      <Button
-        title = "Calculate"
-      />
-      <Card>
-        <AssetExample />
-      </Card>
+      <StatusBar style="auto" />
     </View>
   );
 }
@@ -37,15 +17,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#00000f',
-    padding: 8,
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
   },
 });
