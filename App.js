@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput,} from 'react-native';
 
 
 export default function App() {
@@ -12,6 +12,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Image source={require('./assets/running.png')}
+      style={{width: 105 , height: 100}}/>
       <Text style ={styles.text}>Welcome to the Running Pace Calculator!</Text>
       <View style={styles.row}>
       <Text style={styles.label}>Distance:</Text>
@@ -34,9 +36,9 @@ export default function App() {
       />
       </View>
       <View style={styles.square}>
-      <Text>{distance} Mile(s)</Text>
-      <Text>{times} Minute(s)</Text>
-      <Text>{times / distance} Minute(s) per Mile</Text>
+      <Text style={styles.output}>{distance} Mile(s)</Text>
+      <Text style={styles.output}>{times} Minute(s)</Text>
+      <Text style={styles.output}>{times / distance} Minute(s) per Mile</Text>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -49,21 +51,21 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#9A8C98',
+    backgroundColor: '#F2E9E4',
     alignItems: 'center',
     justifyContent: 'center',
   },
   square: {
     width: 250,
-    backgroundColor: '#F3EBE6',
-    opacity: 0.7,
+    backgroundColor: '#4A4E69',
+    opacity: 0.65,
     borderRadius: 5,
     alignContent: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
     textAlignVertical: 'center',
     textAlign: 'center',
-    color: '#22223B',
+    paddingVertical: 5,
     shadowColor: '#19192D',
     shadowOffset: 100,
     shadowOpacity: .9,
@@ -105,4 +107,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
+  output: {
+    color: '#F8F7F6',
+    opacity: 1,
+  },
+    
 });
