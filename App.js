@@ -13,6 +13,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Welcome to the Running Pace Calculator!</Text>
+      <View style={styles.row}>
+      <Text style={styles.label}>Distance:</Text>
       <TextInput
       style = {styles.input}
       placeholder = "Distance in Miles"
@@ -20,6 +22,9 @@ export default function App() {
       onChangeText = {newDist => setDist(newDist)}
       defaultValue = {dist}
       />
+      </View>
+      <View style={styles.row}>
+      <Text style={styles.label}>Time:</Text>
       <TextInput
         style = {styles.input}
         placeholder = "Time in Minutes"
@@ -27,21 +32,22 @@ export default function App() {
         onChangeText = {newText => setTime(newText)}
         defaultValue = {time}
       />
+      </View>
       <Text style={styles.square}>
         Distance: {dist}, Time: {time}, Pace {times / distance}
       </Text>
       <StatusBar style="auto" />
     </View>
+    
   );
   
 }
 
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#cfcfcf',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -65,9 +71,18 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     margin: 5,
     width: 50,
-    
+    textAlign: 'center',
+  },
+  row: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: 'space-evenly',
+    alignContent: 'center',
+    width: 300,
   },
   label: {
-    
+    textAlignVertical: 'center',
+    textAlign: 'center',
+    padding: 10,
   },
 });
