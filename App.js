@@ -11,11 +11,18 @@ export default function App() {
   const times = parseFloat(time);
 
   return (
-    <View style={styles.container}>
-      <Image source={require('./assets/running.png')}
+// Main formatting with all the input output, and Labels  
+    <View style={styles.container}>    
+      <Image 
+      // Image of the running clipart
+      source={require('./assets/running.png')}
       style={{width: 105 , height: 100}}/>
-      <Text style ={styles.text}>Welcome to the Running Pace Calculator!</Text>
-      <View style={styles.row}>
+
+      <Text // Title Text
+      style ={styles.text}>Welcome to the Running Pace Calculator!</Text>
+
+      <View // Rows with the Labels and input fields
+      style={styles.row}>
       <Text style={styles.label}>Distance:</Text>
       <TextInput
       style = {styles.input}
@@ -35,7 +42,8 @@ export default function App() {
         defaultValue = {time}
       />
       </View>
-      <View style={styles.square}>
+      <View // Rounded corner object for the outputs. 
+      style={styles.square}>
       <Text style={styles.output}>{distance} Mile(s)</Text>
       <Text style={styles.output}>{times} Minute(s)</Text>
       <Text style={styles.output}>{times / distance} Minute(s) per Mile</Text>
@@ -47,9 +55,9 @@ export default function App() {
   
 }
 
-
+// Most of the style code for the different UI elements
 const styles = StyleSheet.create({
-  container: {
+  container: { 
     flex: 1,
     backgroundColor: '#F2E9E4',
     alignItems: 'center',
@@ -111,5 +119,4 @@ const styles = StyleSheet.create({
     color: '#F8F7F6',
     opacity: 1,
   },
-    
 });
