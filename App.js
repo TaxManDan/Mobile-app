@@ -46,19 +46,28 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   square: {
-    width: 150,
+    width: 250,
     height: 24,
     backgroundColor: '#55BCF6',
     opacity: 0.4,
     borderRadius: 5,
+    alignContent: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    textAlignVertical: 'center',
+    textAlign: 'center',
   },
   input: {
     borderwidth: 20,
     borderColor: "#4b475b",
-    padding: 7,
+    padding: 10,
     opacity: 1,
     borderRadius: 6,
-    margin: 7,
+    margin: 5,
+    width: 50,
+    
+  },
+  label: {
     
   },
 });
